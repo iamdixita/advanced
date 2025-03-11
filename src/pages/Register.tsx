@@ -31,6 +31,7 @@ const Register = () => {
       confirmPassword: "",
     },
     validationSchema: registerSchema,
+
     onSubmit: async (values, { setSubmitting }) => {
       try {
         console.log("Submitting Data:", values);
@@ -38,10 +39,10 @@ const Register = () => {
         console.log("API Response:", response);
 
         if (response && response.success) {
-          alert("Registration successful!");
-          navigate("/login");
+          alert("Registration successful.");
         } else {
           alert(response?.message || "Registration successful!");
+          navigate("/login");
         }
       } catch (err) {
         console.error("Error:", err);

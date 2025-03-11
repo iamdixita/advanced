@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard.tsx";
 import Navbar from "./pages/Navbar";
+import Logout from "./pages/Logout.tsx";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/logout" element={<Logout />} />
         </Routes>
       </div>
     </Router>

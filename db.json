@@ -29,6 +29,12 @@
       "username": "guest",
       "password": "xy123",
       "confirmPassword": "xy123"
+    },
+    {
+      "id": "4ab6",
+      "username": "Darsh",
+      "password": "pq123",
+      "confirmPassword": "pq123"
     }
   ]
 }
