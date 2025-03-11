@@ -14,7 +14,7 @@ const HomePage = () => {
 
   return (
     <div className="homepage-container">
-      <h1 className="homepage-title">Welcome to the Page</h1>
+      <h1 className="homepage-title">Welcome to the Home Page</h1>
       <div className="button-container">
         <button className="animated-button" onClick={handleLogin}>
           Login
