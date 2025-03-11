@@ -23,7 +23,7 @@ const loginSchema = yup.object().shape({
     .required("Password is required"),
 });
 
-// ✅ 2️⃣ Define the FormData Interface
+//  Define the FormData Interface
 interface FormData {
   username: string;
   password: string;
@@ -47,7 +47,7 @@ const Login = () => {
       const user = await loginUser(data);
       if (user) {
         dispatch(login(user.username));
-        navigate("/");
+        navigate("/Profile");
       } else {
         alert("Invalid username or password");
       }
@@ -62,20 +62,25 @@ const Login = () => {
       <h2 className="login-title">Login</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="login-form">
         <InputField
-          label="Username"
+          label="Username:"
           type="text"
           name="username"
           register={register}
           errors={errors}
         />
         <InputField
-          label="Password"
+          label="Password:"
           type="password"
           name="password"
           register={register}
           errors={errors}
         />
         <SubmitButton text="Login" isSubmitting={false} />
+        <p>Don't registered yet?</p>
+        {/* <br></br> */}
+        <p>
+          <a href="register"> Signup here</a>
+        </p>
       </form>
     </div>
   );

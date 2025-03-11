@@ -53,12 +53,12 @@ const Register = () => {
   });
 
   return (
-    <div>
-      <h1>Register</h1>
+    <div className="register-container">
+      <h1 style={{ textAlign: "center", marginBottom: "4rem" }}>Register</h1>
       <form onSubmit={formik.handleSubmit}>
         {/* Username Field */}
         <div>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Username:</label>
           <input
             {...formik.getFieldProps("username")}
             id="username"
@@ -71,7 +71,7 @@ const Register = () => {
 
         {/* Password Field */}
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Password:</label>
           <input
             {...formik.getFieldProps("password")}
             id="password"
@@ -84,7 +84,7 @@ const Register = () => {
 
         {/* Confirm Password Field */}
         <div>
-          <label htmlFor="confirmPassword">Confirm Password</label>
+          <label htmlFor="confirmPassword">Confirm Password:</label>
           <input
             {...formik.getFieldProps("confirmPassword")}
             id="confirmPassword"
@@ -96,9 +96,17 @@ const Register = () => {
         </div>
 
         {/* Submit Button */}
-        <button type="submit" disabled={formik.isSubmitting}>
+        <button id="registerbtn" type="submit" disabled={formik.isSubmitting}>
           {formik.isSubmitting ? "Registering..." : "Register"}
         </button>
+        <p
+          style={{
+            marginTop: "2rem",
+            fontSize: "1.2rem",
+            marginLeft: "-1rem",
+          }}>
+          Already have an account? <a href="login"> Login</a>
+        </p>
       </form>
     </div>
   );

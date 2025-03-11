@@ -10,7 +10,8 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({ text, isSubmitting }) => {
     <button
       type="submit"
       disabled={isSubmitting}
-      className="w-full bg-blue-500 text-white p-2 rounded disabled:bg-gray-500">
+      className="button"
+      style={{ marginLeft: "7.4rem" }}>
       {isSubmitting ? "Submitting..." : text}
     </button>
   );
