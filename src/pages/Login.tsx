@@ -1,70 +1,3 @@
-// import { useForm } from "react-hook-form";
-// import { loginUser } from "../services/apiService";
-// import { useDispatch } from "react-redux";
-// import { login } from "../redux/slices/authSlice";
-// import { useNavigate } from "react-router-dom";
-// import InputField from "../components/InputField";
-// import SubmitButton from "../components/SubmitButton";
-// import "../index.css";
-
-// interface FormData {
-//   username: string;
-//   password: string;
-// }
-
-// const Login = () => {
-//   const {
-//     register,
-//     handleSubmit,
-//     formState: { errors },
-//   } = useForm<FormData>();
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-
-//   const onSubmit = async (data: FormData) => {
-//     try {
-//       const user = await loginUser(data.username, data.password);
-
-//       if (user) {
-//         dispatch(login(user.username));
-//         navigate("/");
-//       } else {
-//         alert("Invalid username or password");
-//       }
-//     } catch (error) {
-//       console.error(error);
-//       alert("Invalid username or password");
-//     }
-//   };
-
-//   return (
-//     <div className="login-container">
-//       <h2 className="login-title">Login</h2>
-//       <form onSubmit={handleSubmit(onSubmit)} className="login-form">
-//         <InputField
-//           label="Username"
-//           type="text"
-//           name="username"
-//           register={register}
-//           required={true}
-//           errors={errors}
-//         />
-//         <InputField
-//           label="Password"
-//           type="password"
-//           name="password"
-//           register={register}
-//           required={true}
-//           errors={errors}
-//         />
-//         <SubmitButton text="Login" isSubmitting={false} />
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Login;
-
 // React Hook Form + Yup
 
 import { useForm } from "react-hook-form";
@@ -78,7 +11,7 @@ import InputField from "../components/InputField";
 import SubmitButton from "../components/SubmitButton";
 import "../index.css";
 
-// ✅ 1️⃣ Define the Validation Schema
+// Define the Validation Schema
 const loginSchema = yup.object().shape({
   username: yup.string().required("Username is required"),
   password: yup
@@ -97,7 +30,7 @@ interface FormData {
 }
 
 const Login = () => {
-  // ✅ 3️⃣ Use `useForm` with Yup Validation
+  //  Use `useForm` with Yup Validation
   const {
     register,
     handleSubmit,

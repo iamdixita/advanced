@@ -2,43 +2,33 @@
   "users": [
     {
       "id": "1",
-      "username": "johnDoe",
-      "password": "password123"
-    },
-    {
-      "id": "0ff8",
       "username": "Dixita",
-      "password": "1234"
+      "password": "ab123",
+      "confirmPassword": "ab123"
     },
     {
-      "id": "dbe7",
+      "id": "2",
       "username": "Dhruvi",
-      "password": "10"
+      "password": "123ab",
+      "confirmPassword": "123ab"
     },
     {
-      "id": "730a",
-      "username": "guest",
-      "password": "20"
+      "id": "3",
+      "username": "Vishva",
+      "password": "cd123",
+      "confirmPassword": "cd123"
     },
     {
-      "id": "fdb5",
+      "id": "452e",
       "username": "Vishal",
-      "password": "30"
+      "password": "xy456",
+      "confirmPassword": "xy456"
     },
     {
-      "id": null,
-      "username": "Darshita",
-      "password": "40"
-    },
-    {
-      "id": 2,
+      "id": "734f",
       "username": "guest",
-      "password": "12"
-    },
-    {
-      "id": 3,
-      "username": "Niyati",
-      "password": "50"
+      "password": "xy123",
+      "confirmPassword": "xy123"
     }
   ]
 }

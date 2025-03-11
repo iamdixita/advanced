@@ -41,18 +41,20 @@ export default [
       react,
       "@typescript-eslint": tseslint.plugin,
     },
+
     rules: {
-      // ✅ React rules
+      //  React rules
       "react/react-in-jsx-scope": "off", // Vite handles React auto-import
       "react/prop-types": "off", // Not required in TypeScript
 
-      // ✅ TypeScript rules
+      //  TypeScript rules
       "@typescript-eslint/no-unused-vars": ["off", { argsIgnorePattern: "^_" }],
       "@typescript-eslint/no-explicit-any": "off", // Avoid excessive use of `any`
       "@typescript-eslint/explicit-function-return-type": "off", // Optional for inferred types
 
-      // ✅ General best practices
+      //  General best practices
       "no-console": "off",
+      "no-undef": "off", // Ensure it doesn't complain about undefined variables
       "no-unused-vars": "off", // Handled by TypeScript's rule
       eqeqeq: ["error", "always"], // Enforce strict equality
     },
