@@ -1,5 +1,3 @@
-// React Hook Form + Yup
-
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -23,31 +21,30 @@ const loginSchema = yup.object().shape({
     .required("Password is required"),
 });
 
-//  Define the FormData Interface
+// Define the FormData Interface
 interface FormData {
   username: string;
   password: string;
 }
 
 const Login = () => {
-  //  Use `useForm` with Yup Validation
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({
-    resolver: yupResolver(loginSchema), // Apply the validation schema
+    resolver: yupResolver(loginSchema),
   });
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const onSubmit = async (data: { username: string; password: string }) => {
+  const onSubmit = async (data: FormData) => {
     try {
       const user = await loginUser(data);
       if (user) {
         dispatch(login(user.username));
-        navigate("/Profile");
+        navigate("/dashboard"); // Redirecting to Dashboard after successful login
       } else {
         alert("Invalid username or password");
       }
@@ -76,10 +73,9 @@ const Login = () => {
           errors={errors}
         />
         <SubmitButton text="Login" isSubmitting={false} />
-        <p>Don't registered yet?</p>
-        {/* <br></br> */}
+        <p>Not registered yet?</p>
         <p>
-          <a href="register"> Signup here</a>
+          <a href="/register">Signup here</a>
         </p>
       </form>
     </div>

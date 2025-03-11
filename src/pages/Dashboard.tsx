@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import WithAuth from "../components/WithAuth";
 import "./Dashboard.css";
 
 const Dashboard: React.FC = () => {
@@ -69,4 +70,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default WithAuth(Dashboard);

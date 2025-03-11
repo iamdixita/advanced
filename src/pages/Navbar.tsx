@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
   const navLinksStyle: React.CSSProperties = {
     listStyle: "none",
     display: "flex",
-    gap: "40px",
+    gap: "20px",
     padding: "25px",
   };
 
@@ -45,8 +45,8 @@ const Navbar: React.FC = () => {
     <nav style={navbarStyle}>
       <div style={logoStyle}> MyApp</div>
       <ul style={navLinksStyle}>
-        {["/", "/dashboard", "/profile", "/logout"].map((path, index) => {
-          const names = ["Home", "Dashboard", "Profile", "Logout"];
+        {["/", "/dashboard", "/logout"].map((path, index) => {
+          const names = ["Home", "Dshboard", "Logout"];
           return (
             <li key={path}>
               <Link
